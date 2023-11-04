@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/css/bootstrap.min.css">
     <link rel="stylesheet" href="/public/css/bootstrap-icons-1.5.0/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.all.min.js"></script>
     <script src="/public/js/bootstrap.bundle.min.js"></script>
+    <script src="/public/js/auth-user.js"></script>
     <title>Asset</title>
 </head>
 
@@ -17,7 +19,7 @@
             <i class="bi bi-list" style="font-size: 36px;"></i>
         </a>
         <h1>Asset borrowing</h1>
-        <a class="btn btn-sm border-2 border-black rounded-5 shadow fw-bold" style="background-color: #FFE6C7;" href="/views/aj/login.html">Sign out</a>
+        <button class="btn btn-sm border-2 border-black rounded-5 shadow fw-bold" id="signout" style="background-color: #FFE6C7;">Sign out</button>
     </nav>
     <!-- search bar -->
     <div class="container text-center">
@@ -133,6 +135,30 @@
             </ul>
         </div>
     </div>
+    <script>
+        //! call calss Auth 
+        const auth_user = new Auth_user();
+        document.querySelector('#signout').onclick = function(){
+        // alert('ok');
+        Swal.fire({
+        title: 'Do you want to sign out',
+        color:'#FFA559',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#FFA559',
+        cancelButtonColor: '#FFE6C7',
+        cancelButtonText: 'Cancel',
+        confirmButtonText: 'Sure'
+        
+      }).then((result) => {
+        if (result.isConfirmed) {
+          auth_user.logout('/b-login');
+        }
+      });
+}
+
+
+    </script>
 </body>
 
 </html>

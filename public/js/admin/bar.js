@@ -1,3 +1,5 @@
+//! call calss Auth  
+const auth_admin = new Auth_admin();
 const body = document.querySelector('body');
  sidebar = body.querySelector('.sidebar');
  toggle = body.querySelector('#sidebarToggle');
@@ -20,7 +22,7 @@ sidebar.querySelector('#logout').onclick = function () {
         ,cancelButtonText: 'No'
       }).then((result) => {
         if (result.isConfirmed) {
-          window.location.replace('#');
+          auth_admin.logout('/b-login/admin');         
         }
       });
     console.log('Test');

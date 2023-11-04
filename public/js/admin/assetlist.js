@@ -11,7 +11,7 @@ function showTable() {
     var dataTable = '';
     for (const iterator of data) {
         i += 1;
-        dataTable += `<tr data-href='/views/admin/edit.html'><td>${i}</td>`;
+        dataTable += `<tr data-href='/admin/edit'><td>${i}</td>`;
         dataTable += `<td>${iterator.id}</td>`;
         dataTable += `
         <td>

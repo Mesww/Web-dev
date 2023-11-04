@@ -1,3 +1,6 @@
+//! call calss Auth  
+const auth_user = new Auth_user();
+
 document.querySelector('#signout').onclick = function(){
     // alert('ok');
     Swal.fire({
@@ -12,7 +15,7 @@ document.querySelector('#signout').onclick = function(){
         
       }).then((result) => {
         if (result.isConfirmed) {
-          window.location.replace('/views/b-login.html');
+          auth_user.logout('/b-login');
         }
       });
 }

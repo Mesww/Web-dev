@@ -17,7 +17,7 @@ document.querySelector('#delete-button').onclick = function () {
         ,cancelButtonText: 'No'
       }).then((result) => {
         if (result.isConfirmed) {
-          window.location.replace('/views/admin/assetlist.html');
+          window.location.replace('/admin/assetlist');
         }
       });
     // console.log('Test');
@@ -35,7 +35,7 @@ document.querySelector('#confirm').onclick = function () {
         ,cancelButtonText: 'No'
       }).then((result) => {
         if (result.isConfirmed) {
-          window.location.replace('/views/admin/assetlist.html');
+          window.location.replace('/admin/assetlist');
         }
       });
     // console.log('Test');

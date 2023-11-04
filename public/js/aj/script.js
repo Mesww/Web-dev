@@ -1,3 +1,5 @@
+//! call calss Auth 
+const auth_user = new Auth_user();
 function openGmail() {
     // เปิดหน้าต่างเบราว์เซอร์ใหม่พร้อมลิงก์ไปยัง Gmail
     var link = "https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtDpKsfRfdcRVpqTHkQTtgHKNdJlZQCWgnvKfDmxgjWCKbgscXFxkKnNVrpCFfpXPbnZgHtl";
@@ -101,7 +103,8 @@ function logout() {
         icon: 'success',
         title: 'Signed out successfully'
       }).then(()=>{
-        window.location.replace('/views/aj/login.html');
+        auth_user.logout('/b-login');
+
       })
     }
   });
